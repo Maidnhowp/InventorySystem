@@ -46,6 +46,9 @@
         </div>
         <button type="submit" name="login">Login</button>
     </form>
+    <div>
+        <a href="register.php">Don't have an account?</a>
+    </div>
     <?php
         if(!empty($error)) {
             echo "<p>$error</p>";

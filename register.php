@@ -78,6 +78,9 @@
             </div>
             <button type="submit" name="register">Register</button>
         </form>
+        <div>
+            <a href="login.php">Already a member?</a>
+        </div>
         <?php
             if(!empty($error)) {
                 echo "<p>$error</p>";
