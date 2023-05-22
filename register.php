@@ -1,8 +1,12 @@
 <?php
-    include('server.php');
     session_start();
 
+    if(isset($_SESSION['username'])) {
+        header('location: index.php');
+    }
+
     if(isset($_POST['register'])) {
+        include('server.php');
         $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $password2 = mysqli_real_escape_string($conn, $_POST['password2']);
@@ -31,6 +35,7 @@
                 unset($_SESSION['filled']);
             }
 
+            //register complete
             if($error == "") {
                 unset($_SESSION['filled']);
                 $sql = "INSERT INTO user(username, password, email) VALUES('$username', '$password', '$email')";
@@ -43,10 +48,9 @@
         } else {
             $error = "Please fill all of the form";
         }
-    } else {
-        unset($_SESSION['filled']);
     }
 
+    unset($_SESSION['filled']);
 ?>
 
 <!DOCTYPE html>
@@ -62,11 +66,11 @@
         <form action="register.php" method="post">
             <div>
                 <label for="username">Username</label>
-                <input type="text" name="username" value="<?= $_SESSION['filled']['username'] ?>">
+                <input type="text" name="username" value="<?= $username ?>">
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" value="<?= $_SESSION['filled']['email'] ?>">
+                <input type="email" name="email" value="<?= $email ?>">
             </div>
             <div>
                 <label for="password">Password</label>

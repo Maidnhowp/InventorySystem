@@ -21,7 +21,7 @@
         <a href="register.php"><button>sign up</button></a>
         <a href="login.php"><button>sign in</button></a>
     <?php } else { ?>
-        <a href="index.php?logout='1'"><button>log out</button></a>
+        <a href="index.php?logout"><button>log out</button></a>
     <?php } ?>
 </body>
 </html>
