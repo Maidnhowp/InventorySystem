@@ -1,6 +1,8 @@
 <?php
     include('server.php');
     session_start();
+    $username = "";
+
 
     if(isset($_SESSION['username'])) {
         header('location: index.php');
@@ -42,7 +44,7 @@
     <form action="login.php" method="post">
         <div>
             <label for="username">Username</label>
-            <input type="text" name="username" value="<?= $_SESSION['filled']['username'] ?>">
+            <input type="text" name="username" value="<?= $username ?>">
         </div>
         <div>
             <label for="password">Password</label>
