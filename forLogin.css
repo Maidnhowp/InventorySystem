@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://images.wallpaperscraft.com/image/single/living_room_interior_design_106134_1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+.container{
+    background-color: #fff;
+    justify-content: center;
+    width: 50%;
+    display: flex;
+    height: 100vh;
+    padding: 2.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+}
+.container form{
+    /* outline: 1px solid red; */
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.container form h2{
+    /* outline: 1px solid red; */
+    color: #223243;
+    font-weight: 500;
+}
+.container form .box{
+    /* outline: 1px solid red; */
+    position: relative;
+    width: 100%;
+}
+.container form .box button{
+    margin-top: 1rem;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 0;
+    border-radius: 0.25rem;
+    border: none;
+}
+.container form .box button:hover{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.container form .box input{
+    /* outline: 1px solid red; */
+    padding: 15px 30px 15px 50px;
+    border: none;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+    border-radius: 0.25rem;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+.container form .box #errorText{
+    transition: 0.5s;
+    display: flex;
+    font-size: small;
+    color: red;
+    width: 100%;
+    padding-left: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.box #slash{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #e2dfdf;
+    position: relative;
+}
+.box strong{
+    font-size: 20px;
+    position: absolute;
+    top: -12px;
+    color: #8f8f8f;
+    /* outline: 1px solid red; */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 0.5rem;
+    background-color: #fff;
+}
+.box p{
+    font-size: 14px;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container form .box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px 10px 15px 50px;
+    font-size: 1em;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: #333;
+    opacity: 60%;
+}
+.container form .box i{
+    position: absolute;
+    top: 0.95rem;
+    left: 1rem;
+    width: 1.5rem;
+    padding: 2px 0;
+    padding-right: 8px;
+    color: #333;
+    border-right: 1px solid #333;
+}
+.container form .box input:focus{
+    outline: 2px solid #00bfff;
+}
+.container form .box input:valid ~ span,
+.container form .box input:focus ~ span{
+    color: 	#00bfff;
+    background: #fff;
+    transform: translateX(25px) translateY(-8px);
+    font-size: 0.8em;
+    padding: 0 8px;
+    border-radius: 10px;
+    opacity: 100%;
+}
