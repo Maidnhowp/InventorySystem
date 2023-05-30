@@ -12,6 +12,7 @@
         /* outline: 1px solid red; */
         display: flex;
         flex-direction: column;
+        width: 80%;
         > .category-collecttion {
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -22,7 +23,7 @@
                     text-decoration: none;
                     color: #333;
                     > div category-img img{
-                        width: 500px;
+                        width: 100%;
                         height: 300px;
                         object-fit: cover;
                     }
@@ -145,6 +146,13 @@
                     > item-img img{
                         max-width: 300px;
                         max-height: 300px;
+                    }
+                }
+            }
+            > .card:hover {
+                > a{
+                    > item-name h3{
+                        text-decoration: underline;
                     }
                 }
             }

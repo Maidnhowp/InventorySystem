@@ -16,12 +16,12 @@
         
         $error = "";
 
-        if(!isset($_SESSION['filled'])) {
-            $_SESSION['filled'] = array('username'=>$username, "email"=>$email);
-        } else {
-            $_SESSION['filled']['username'] = $username;
-            $_SESSION['filled']['email'] = $email;
-        }
+        // if(!isset($_SESSION['filled'])) {
+        //     $_SESSION['filled'] = array('username'=>$username, "email"=>$email);
+        // } else {
+        //     $_SESSION['filled']['username'] = $username;
+        //     $_SESSION['filled']['email'] = $email;
+        // }
 
         //all form is not empty 
         if(!empty($username) and !empty($password) and !empty($password2) and !empty($email)) {        
@@ -39,11 +39,13 @@
 
             //register complete
             if($error == "") {
-                unset($_SESSION['filled']);
+                // unset($_SESSION['filled']);
                 $sql = "INSERT INTO user(username, password, email) VALUES('$username', '$password', '$email')";
                 mysqli_query($conn, $sql);
                 
                 $_SESSION['username'] = $username;
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['role'] = $row['role'];
                 header('location: index.php');
             }
 
@@ -52,7 +54,7 @@
         }
     }
 
-    unset($_SESSION['filled']);
+    // unset($_SESSION['filled']);
 ?>
 
 <!DOCTYPE html>

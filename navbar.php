@@ -11,6 +11,11 @@
             <?php if(!isset($_SESSION['username'])) :?>
                 <li class="nav-item"> <button onclick="window.location.href='<?= $location?>';">Login/Register</button> </li>
             <?php else :?>
+                <?php if($_SESSION['role'] == 'user') : ?>
+                    <li class="nav-item"> <button onclick="window.location.href='seller/sellerRegister.php';">Start Selling</button> </li>
+                <?php else : ?>
+                    <li class="nav-item"> <button onclick="window.location.href='seller/';">My Shop</button> </li>
+                <?php endif ?>
                 <li class="nav-item"> <button onclick="window.location.href='index.php?logout';">Log Out</button> </li>
             <?php endif?>
         </ul>
