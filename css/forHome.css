@@ -1,0 +1,115 @@
+body{
+    min-height: 100vh;
+    display: flex;
+}
+#show-count-product{
+    width: 100%;
+    padding-bottom: 1rem;
+}
+.big{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+br{
+    margin: 2rem 0;
+}
+.nav{
+    /* outline: 1px solid red; */
+    margin-top: 10rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    > img{
+        margin-left: 2rem;
+        display: flex;
+        width: 40px;
+    }
+    > form{
+        margin-right: 10%;
+        width: 70%;
+        display: flex;
+        >input{
+            outline: 1px solid #333;
+            border: none;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            width: 100%;
+        }
+        >button{
+            border-radius: 0.25rem;
+            color: #fff;
+            border: none;
+            background-color: green;
+            margin-left: 0.5rem;
+            padding: 0.55rem 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        >button:hover{
+            background: #fff;
+            color: green;
+            outline: 1px solid green;
+        }
+    } 
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid black;
+}
+.product .desc{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #333;
+}
+.product-list{
+    /* outline: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem
+}
+product-img img{
+    width: 80%;
+}
+product-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+product-name{
+    padding-left: 0.5rem;
+}
+product-bran{
+    padding-left: 0.5rem;
+}
+product-detail{
+    padding-left: 0.5rem;
+}
+.product div{
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+}
+.product div button{
+    padding: 0 1rem;
+    outline: 1px solid black;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    
+}
